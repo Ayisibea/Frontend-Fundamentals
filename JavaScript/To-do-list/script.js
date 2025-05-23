@@ -1,5 +1,6 @@
 const inputBox = document.getElementById("input-box");
 const listContainer = document.getElementById("list-container");
+const addButton = document.getElementById('add-btn');
 function addTask(){
     if (inputBox.value == ''){
     alert('You must input a task');
@@ -15,6 +16,8 @@ function addTask(){
     inputBox.value ='';
     saveData()
 }
+
+addButton.addEventListener('click',addTask)
 
 listContainer.addEventListener('click',function(e){
     if(e.target.tagName == 'LI'){
