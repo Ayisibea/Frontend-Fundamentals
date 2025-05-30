@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./css/style.css">
+    <title>EduFord</title>
+</head>
+
+<body>
+    <header id="sub">
+        <nav>
+            <div class="logo">
+                <a href="#">
+                    <img src="./img/logo.png" alt="logo of website">
+                </a>
+            </div>
+            <input type="checkbox" name="check" id="check">
+            <label for="check"> <i class="fi fi-br-menu-burger"></i> </label>
+            <ul>
+                <li><label for="check"> <i class="fi fi-br-cross"></i></label></li>
+
+                <li><a href="./index.html">HOME</a></li>
+                <li><a href="./about.html">ABOUT</a></li>
+                <li><a href="./course.html">COURSE</a></li>
+                <li><a href="./blog.html">BLOG</a></li>
+                <li><a href="./contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+        <div class="title">
+            <h1>#Our Courses</h1>
+        </div>
+    </header>
+    <div class="map">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1476.8053553814407!2d73.77574835303534!3d20.004176853736514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bddeba125543221%3A0x149b13ae76edbaeb!2sPandit%20Colony%2C%20Nashik%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1680500860676!5m2!1sen!2sin"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <section id="contact">
+        <div class="left">
+            <div class="row">
+                <div class="icon">
+                    <i class="fi fi-ss-home"></i>
+                </div>
+                <div class="info">
+                    <h4>Pandit Coloney Nashik</h4>
+                    <span>Lane No 3. Parijatak Apartment</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="icon">
+                    <i class="fi fi-ss-call-history"></i>
+                </div>
+                <div class="info">
+                    <h4>+91 8080672376</h4>
+                    <span>Contact on This Telephone No</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="icon">
+                    <i class="fi fi-ss-envelope-open"></i>
+                </div>
+                <div class="info">
+                    <h4>darshankhairnar72@gmail.com</h4>
+                    <span>Mail Us on This Email Id</span>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="form">
+                <h4>Contact Us</h4>
+                <form method="post">
+                    <div class="row">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name">
+                    </div>
+                    <div class="row">
+                        <label for="email">Email Id</label>
+                        <input type="mail" name="email" id="email">
+                    </div>
+                    <div class="row">
+                        <label for="subject">Subject</label>
+                        <input type="text" name="subject" id="subject">
+                    </div>
+                    <div class="row">
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message"></textarea>
+                    </div>
+                    <div class="row">
+                        <button id="btn">Send Message</button>
+                    </div>
+                </form>
+            </div>
+    </section>
+
+    <footer>
+        <h4>Easy Tutorial</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, pariatur!</p>
+        <div class="social">
+            <i class="fi fi-brands-facebook"></i>
+            <i class="fi fi-brands-instagram"></i>
+            <i class="fi fi-brands-twitter"></i>
+        </div>
+        <p> &copy; Copyright is reserved with Darshan Khairnar</p>
+    </footer>
+
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+
+    <script>
+        let btn = document.getElementById("btn");
+
+
+
+        btn.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let subject = document.getElementById("subject").value;
+            let message = document.getElementById("message").value;
+
+            Email.send({
+                Host: "smtp.elasticemail.com",
+                Username: "darshankhairnar72@gmail.com",
+                Password: "B9B202D72278FF8D690FE3EDC8A12DBB8D08",
+                To: 'darshankhairnar72@gmail.com',
+                From: "darshankhairnar72@gmail.com",
+                Subject: subject,
+                Body: message
+            }).then(
+                message => alert(message)
+            );
+        })
+    </script>
+</body>
+
+
+</html>
