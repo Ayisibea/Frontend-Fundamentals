@@ -9,7 +9,7 @@ body {
 
 /* Navbar Styles */
 .navbar {
-    background-color: #2d3748;
+    background-color: #131612;
     padding: 0.75rem 2.5rem;
 }
 
@@ -76,7 +76,7 @@ body {
 
 .nav-link.active::after {
     content: '';
-    position: center;
+    position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -86,7 +86,7 @@ body {
 
 .nav-actions {
     display: flex;
-    align-items: absolute;
+    align-items: center;
     gap: 1rem;
 }
 
@@ -169,7 +169,7 @@ body {
 }
 
 .banner-image {
-    width: 100%;
+    width: 50%;
     aspect-ratio: 16/9;
     background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAtTtYB4hTNhk9MFG9PRyVGxDXabiT8tHiNx-IzQdI3Z2Rx6_rx6qzpBG01SLaECD_P7SpH1K_VWke00lxT90_ceN7UyhqynsPER5RfdtS_27qupk1Q2-1FlMsbZvY3sATOp5JwuQkJdP_IWl959l9UHdz4HslSwlqXDDxEBWml87VcOZPHV-KbD95MZDptOJq6qmqpl-auXxQCxRw8EgvGpJa2K60OWBzqz3XkeBHndz1ciNH4GBBJnvnVMkCke8P-fdGYKOudbZM");
     background-size: cover;
