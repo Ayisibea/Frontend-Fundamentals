@@ -1,0 +1,341 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    color: white;
+}
+
+.navbar {
+    background-color: #2d3748;
+    padding: 0.5rem 1rem;
+}
+
+.nav-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.brand-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-img {
+    height: 2.5rem;
+    margin-right: 0.75rem;
+}
+
+.brand-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: white;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.login-btn {
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.get-started-btn {
+    background-color: #4f46e5;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.get-started-btn:hover {
+    background-color: #4338ca;
+}
+
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #a0aec0;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 0.5rem;
+}
+
+.nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #a0aec0;
+    text-decoration: none;
+    border-radius: 0.375rem;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.nav-link:hover {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-link.active {
+    color: white;
+    background-color: #4f46e5;
+}
+
+/* Main Content Styles */
+.main-content {
+    padding: 1.25rem 2.5rem;
+}
+
+.content-container {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.header-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 1rem;
+}
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    min-width: 18rem;
+}
+
+.main-heading {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: -0.015em;
+}
+
+.welcome-text {
+    color: #a6b3a2;
+    font-size: 0.875rem;
+    margin: 0;
+}
+
+.banner-image {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAtTtYB4hTNhk9MFG9PRyVGxDXabiT8tHiNx-IzQdI3Z2Rx6_rx6qzpBG01SLaECD_P7SpH1K_VWke00lxT90_ceN7UyhqynsPER5RfdtS_27qupk1Q2-1FlMsbZvY3sATOp5JwuQkJdP_IWl959l9UHdz4HslSwlqXDDxEBWml87VcOZPHV-KbD95MZDptOJq6qmqpl-auXxQCxRw8EgvGpJa2K60OWBzqz3XkeBHndz1ciNH4GBBJnvnVMkCke8P-fdGYKOudbZM");
+    background-size: cover;
+    background-position: center;
+    border-radius: 0.75rem;
+}
+
+.balance-section {
+    width: 100%;
+    min-width: 18rem;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    gap: 0.25rem;
+    padding: 1rem 0;
+}
+
+.balance-amount {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.balance-details {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 0.75rem;
+}
+
+.account-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.account-type, .balance-label {
+    color: #a6b3a2;
+    font-size: 1rem;
+    margin: 0;
+}
+
+@media (max-width: 1024px) {
+    .main-content {
+        padding: 1.25rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-toggle {
+        display: inline-flex;
+    }
+
+    .mobile-menu {
+        display: none;
+        width: 100%;
+    }
+
+    .mobile-menu.active {
+        display: flex;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+.transactions-section {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #131612;
+    border-radius: 0.5rem;
+}
+
+.section-title {
+    font-size: 1.375rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.015em;
+}
+
+.transactions-table-container {
+    border: 1px solid #434f40;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    background-color: #131612;
+}
+
+.transactions-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Manrope', 'Noto Sans', sans-serif;
+}
+
+.transactions-table thead {
+    background-color: #1f241e;
+}
+
+.transactions-table th {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    color: #ffffff;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.transactions-table td {
+    padding: 0.5rem 1rem;
+    height: 4.5rem; 
+    color: #a6b3a2;
+    font-size: 0.875rem;
+    font-weight: 400;
+}
+
+.transactions-table tr {
+    border-top: 1px solid #434f40;
+}
+
+
+.column-date {
+    width: 25%;
+}
+
+.column-description {
+    width: 50%;
+}
+
+.column-amount {
+    width: 25%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .transactions-section {
+        padding: 0.5rem;
+    }
+    
+    .transactions-table th,
+    .transactions-table td {
+        padding: 0.5rem;
+    }
+    
+    .column-date {
+        width: 30%;
+    }
+    
+    .column-description {
+        width: 40%;
+    }
+    
+    .column-amount {
+        width: 30%;
+    }
+}
+
+@media (max-width: 480px) {
+    .transactions-table td {
+        height: auto;
+        padding: 0.75rem 0.5rem;
+    }
+    
+    .column-date {
+        display: none;
+    }
+    
+    .column-description {
+        width: 70%;
+    }
+    
+    .column-amount {
+        width: 30%;
+    }
+}
