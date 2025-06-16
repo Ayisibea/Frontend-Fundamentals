@@ -2,7 +2,7 @@
 <html>
     <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Withdraw</title>
+    <title>Transfer</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     </head>
@@ -21,10 +21,10 @@
                     <a href="index.html" class="nav-link">Account</a>
                 </li>
                 <li>
-                    <a href="deposit.html" class="nav-link active">Deposit</a>
+                    <a href="deposit.html" class="nav-link">Deposit</a>
                 </li>
                 <li>
-                    <a href="transfer.html" class="nav-link">Transfer</a>
+                    <a href="transfer.html" class="nav-link active">Transfer</a>
                 </li>
                 <li>
                     <a href="withdraw.html" class="nav-link">Withdraw</a>
@@ -41,9 +41,14 @@
     <div class="deposit-container">
   <div class="deposit-content">
     <div class="deposit-header">
-      <h2 class="deposit-title">Deposit money</h2>
+      <h2 class="deposit-title">Transfer Money</h2>
     </div>
-    
+    <div class="amount-section">
+      <label class="amount-input-group">
+        <span class="amount-label">Account Number</span>
+        <input type="text" placeholder="Enter receipient account number" class="amount-input" />
+      </label>
+    </div>
     <div class="amount-section">
       <label class="amount-input-group">
         <span class="amount-label">Amount</span>
@@ -52,14 +57,9 @@
     </div>
     <div class="button-section">
       <button class="deposit-btn">
-        <span class="btn-text">Deposit</span>
+        <span class="btn-text">Transfer</span>
       </button>
     </div>
-    <div class="balance-section">
-        <div class="account-info">
-            <p class="balance-label">Available balance:</p>
-            <p class="balance-amount">$2,345.67</p>
-        </div>
   </div>
 </div>
 <script src="script.js"></script>

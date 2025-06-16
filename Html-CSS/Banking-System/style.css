@@ -201,6 +201,7 @@ body {
     gap: 0.75rem;
 }
 
+
 .account-info {
     display: flex;
     flex-direction: column;
@@ -328,33 +329,23 @@ body {
 }
 
 /* Amount Input */
-#amount-input-section {
+#amount-input-section  {
+  padding: 0 1rem;
+  margin-top: 0.5rem; 
   display: flex;
-  max-width: 480px;
-  flex-wrap: wrap;
-  align-items: flex-end;
-  gap: 1rem;
-  padding: 0.75rem 1rem;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-#amount-input {
-  display: flex;
+#amount-input{
   width: 100%;
-  min-width: 0;
-  flex: 1;
-  resize: none;
-  overflow: hidden;
+  padding: 1rem;
   border-radius: 0.75rem;
-  color: white;
-  outline: none;
   border: none;
   background-color: #2e352c;
-  height: 2.5rem;
-  padding: 1rem;
+  color: white;
   font-size: 1rem;
-  line-height: 1.5;
 }
-
 #amount-input::placeholder {
   color: #a6b3a2;
 }
@@ -465,4 +456,8 @@ body {
   font-weight: 700;
   border: none;
   cursor: pointer;
+}
+.balance-section {
+  padding: 0 1rem;
+  margin-top: 0.5rem; 
 }
