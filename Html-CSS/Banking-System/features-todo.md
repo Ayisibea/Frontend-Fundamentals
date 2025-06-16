@@ -1,9 +1,9 @@
 # Banking System Project - Feature List
 
 ### Account Deposit  
-- [ ] A user should be able to go to the deposit page and add money to their account
-- [ ] The added amount should reflect in their total balance on the Account page
-- [ ] Validate that the user can only input a number, alphabets and other non-numeric values should be rejected
+- [x] A user should be able to go to the deposit page and add money to their account
+- [x] The added amount should reflect in their total balance on the Account page
+- [x] Validate that the user can only input a number, alphabets and other non-numeric values should be rejected
 
 ### Account Withdrawal  
 - [ ] A user should be able to go to the withdraw page and withdraw money from their account
