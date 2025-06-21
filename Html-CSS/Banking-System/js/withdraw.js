@@ -3,7 +3,7 @@ const withdrawButton = document.getElementById('withdraw-button');
 const withdrawInput = document.getElementById('withdraw-input');
 const balanceAmount = document.getElementsByClassName('balance-amount')[0];
 
-// Set initial balance (from localStorage or default)
+// Set initial balance (from localStorage ) '
 let currentBalance = parseFloat(localStorage.getItem('balance')) || 0;
 balanceAmount.textContent = `$${currentBalance.toFixed(2)}`; // Display balance
 
