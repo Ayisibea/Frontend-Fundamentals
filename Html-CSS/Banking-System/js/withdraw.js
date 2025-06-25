@@ -5,7 +5,15 @@ const balanceAmount = document.getElementsByClassName('balance-amount')[0];
 
 // Set initial balance (from localStorage ) '
 let currentBalance = parseFloat(localStorage.getItem('balance')) || 0;
-balanceAmount.textContent = `$${currentBalance.toFixed(2)}`; // Display balance
+balanceAmount.textContent = `GHS${currentBalance.toFixed(2)}`; // Display balance
+
+function loadTransactions() {
+  const data = localStorage.getItem('transactions');
+  return data ? JSON.parse(data) : [];
+}
+function saveTransactions(transactions) {
+  localStorage.setItem('transactions', JSON.stringify(transactions));
+}
 
 // Withdraw button click handler
 withdrawButton.onclick = function() {
@@ -26,7 +34,7 @@ withdrawButton.onclick = function() {
   }
   
   if (amount > currentBalance) {
-    alert(`Insufficient funds\nCurrent balance: $${currentBalance.toFixed(2)}`);
+    alert(`Insufficient funds\nCurrent balance: GHS${currentBalance.toFixed(2)}`);
     withdrawInput.focus();
     return;
   }
@@ -34,17 +42,26 @@ withdrawButton.onclick = function() {
   // Update balance
   currentBalance -= amount;
   localStorage.setItem('balance', currentBalance.toFixed(2));
-  balanceAmount.textContent = `$${currentBalance.toFixed(2)}`;
+  balanceAmount.textContent = `GHS${currentBalance.toFixed(2)}`;
   
-  alert(`Successfully withdrew $${amount.toFixed(2)}\nNew balance: $${currentBalance.toFixed(2)}`);
+  // Adding withdrawal transaction
+  const transactions = loadTransactions();
+  transactions.unshift({
+    date: new Date().toISOString().split('T')[0],
+    type: 'WITHDRAWAL',
+    amount: amount
+  });
+  saveTransactions(transactions);
+
+  alert(`Successfully withdrew GHS${amount.toFixed(2)}\nNew balance: GHS${currentBalance.toFixed(2)}`);
   withdrawInput.value = "";
 };
 
-let name = {firstname:'boy',lastname:'man'}
-localStorage.setItem('name',JSON.stringify(name))
-let names = localStorage.getItem('name')
-console.log(names)
-console.log(names.firstname)
-let a = JSON.parse(localStorage.getItem('name'))
-console.log(a)
-console.log(a.firstname)
+// let name = {firstname:'boy',lastname:'man'}
+// localStorage.setItem('name',JSON.stringify(name))
+// let names = localStorage.getItem('name')
+// console.log(names)
+// console.log(names.firstname)
+// let a = JSON.parse(localStorage.getItem('name'))
+// console.log(a)
+// console.log(a.firstname)
