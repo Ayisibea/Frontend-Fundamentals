@@ -19,6 +19,12 @@
 - [x] Should contain the date, transaction type(WITHDRAWAL, DEPOSIT or TRANSFER) and amount
 - [x] Amount should have a "+" or "-" based on the transaction made. eg. for a WITHDRAWAL, the amount should be "- GHS 30.00" and for a deposit, "+ GHS 30.00"
 
+### Money Transfer  
+- [ ] A user should be able to go to the transfer page and send money to an account
+- [ ] The transferred amount should reflect in their total balance on the Account Overview page
+- [ ] Validate that the user can only input a number, alphabets and other non-numeric values should be rejected
+- [ ] A user should not be able to send more money than available in their account
+
 
 
 
